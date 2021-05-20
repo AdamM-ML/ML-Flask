@@ -1,5 +1,5 @@
 # ML-Techniques
-Contains projects which demonstrate different machine learning techniques (implemented in Python).</br>
+Contains projects which demonstrate different machine learning techniques (implemented in Python).</br></br>
 KNN:</br>
 Project contains simple use of KNN (k-nearest neighbours) technique applied to the dataset which topic are animals and their features.
 It tries to predict the type of the animal basing on its features and looking at nearest, most similar animals in order to classify the type of one correctly. 
