@@ -7,5 +7,5 @@ of wine and applies it to the prediction mechanism.</br>
 
 Matplotlib is used to visualize the data and predictions.</br> </br> 
 
-Important thing to notice is the ease with which we can substitute different feature/prediction in both KNN project and Linear Regression project.</br> 
+Important thing to notice is the ease with which we can substitute different feature/prediction in both KNN project and Linear Regression project. 
 In this way we can predict values basing on different set of features or predict different features.
