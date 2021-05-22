@@ -8,7 +8,6 @@ from sklearn import linear_model
 
 data = pd.read_csv("winequality-red.csv", sep=";")
 
-
 data = data[["fixed acidity", "volatile acidity", "quality", "chlorides", "free sulfur dioxide", "total sulfur dioxide",
              "density", "pH", "sulphates", "citric acid", "residual sugar", "alcohol"]]
 
@@ -34,10 +33,8 @@ for _ in range(10):
             pickle.dump(linear_best_fit_line, dataFile)
 
 
-
 graph_in = open("wineDataModel", "rb")
 linear_best_fit_line = pickle.load(graph_in)
-
 
 predictions = linear_best_fit_line.predict(x_test)
 for i in range(len(predictions)):
