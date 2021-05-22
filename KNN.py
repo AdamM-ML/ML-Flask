@@ -7,7 +7,7 @@ from sklearn import linear_model, preprocessing
 
 data = pd.read_csv("zoo.data")
 
-# Data preprocessing / preparing data
+# Data preprocessing / preparing data as not all values are numbers and KNN requires number values
 
 preproc_data = preprocessing.LabelEncoder()
 #animal_name = preproc_data.fit_transform(list(data["animal_name"]))
@@ -29,6 +29,8 @@ domestic = preproc_data.fit_transform(list(data["domestic"]))
 catsize = preproc_data.fit_transform(list(data["catsize"]))
 type = preproc_data.fit_transform(list(data["type"]))
 
+#Value we predict with the model
+
 predict = "type"
 
 X = list(zip(hair,feathers,eggs,milk,airborne,aquatic,predator,toothed,backbone,breathes,venomous,fins,
@@ -37,10 +39,12 @@ Y= list(type)
 
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, Y, test_size=0.20)
 
-k = 9 #9 gives the best accuracy
+k = 9 #9 gives the best accuracy, k cannot be too high or too low
 '''
-#Finding best value of k (the one which gives the best accuracy)
-for _ in range(3):
+#Finding best value of k (the one which gives the best accuracy), this can be done either by 
+#giving high k value in the beginning and decrease it with each iteration, or low k value and
+#increase it with each iteration. In these ways we can see what accuracy is given by what k value
+for _ in range(4):
     k = k+2
     KNN_model = KNeighborsClassifier(n_neighbors=k) #acc depends on this mainly
     KNN_model.fit(x_train, y_train)
@@ -49,15 +53,17 @@ for _ in range(3):
     print(round(model_accuracy*100),"%")
 '''
 
-KNN_model = KNeighborsClassifier(n_neighbors=k) #acc depends on this mainly
+KNN_model = KNeighborsClassifier(n_neighbors=k) #accuracy depends on this mainly
 KNN_model.fit(x_train, y_train)
 model_accuracy = KNN_model.score(x_test, y_test)
 print("Accuracy ( k =",k,"):")
 print(round(model_accuracy*100),"%")
 predicted = KNN_model.predict(x_test)
 
+#set of values for 'predict'
 data_names = [1, 2, 3, 4, 5, 6, 7]
 
+#Comparing predictions made by the model with the real values from the dataset
 for i in range(len(predicted)):
     print("Predicted class:", data_names[predicted[i]], "For data:", x_test[i], "Original class:", data_names[y_test[
         i]], "Considered neighbours:", KNN_model.kneighbors([x_test[i]], n_neighbors=3))
