@@ -7,6 +7,8 @@ from sklearn import linear_model, preprocessing
 
 data = pd.read_csv("zoo.data")
 
+# Data preprocessing / preparing data
+
 preproc_data = preprocessing.LabelEncoder()
 #animal_name = preproc_data.fit_transform(list(data["animal_name"]))
 hair = preproc_data.fit_transform(list(data["hair"]))
@@ -35,8 +37,9 @@ Y= list(type)
 
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(X, Y, test_size=0.20)
 
-k = 9
+k = 9 #9 gives the best accuracy
 '''
+#Finding best value of k (the one which gives the best accuracy)
 for _ in range(3):
     k = k+2
     KNN_model = KNeighborsClassifier(n_neighbors=k) #acc depends on this mainly
@@ -49,7 +52,7 @@ for _ in range(3):
 KNN_model = KNeighborsClassifier(n_neighbors=k) #acc depends on this mainly
 KNN_model.fit(x_train, y_train)
 model_accuracy = KNN_model.score(x_test, y_test)
-print("Accuracy (k=",k,"):")
+print("Accuracy ( k =",k,"):")
 print(round(model_accuracy*100),"%")
 predicted = KNN_model.predict(x_test)
 
