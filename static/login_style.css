@@ -1,0 +1,16 @@
+body {
+font-family: "Verdana";
+margin-bottom: 50px;
+margin-right: 50px;
+margin-left: 50px;
+color: black;
+font-size: x-large;
+text-align: center;
+background-color: #3CB371;
+}
+
+input {
+  width: 30%;
+  border: 6px solid black;
+  border-radius: 5px;
+}

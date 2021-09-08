@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+    {% with messages=get_flashed_messages() %}
+        {% if messages: %}
+            {% for msg in messages:  %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                  crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login_style.css')}}">
+
+            <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+            <link href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/67239/animate.min.css" rel="stylesheet" />
+
+            <title>
+                FLASK PROJECT login
+            </title>
+    </head>
+
+
+<div class="body"></div>
+
+<div class="overlay">
+    <div class="ui-panel login-panel animated bounceInDown">
+        <form action="#" method="POST">
+            </br>
+            <p><input type="text" name="un"/></p>
+            <p><input type="submit" value="login"/></p>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="//use.typekit.net/psm0wvc.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+{% endblock %}

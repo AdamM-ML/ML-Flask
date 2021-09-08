@@ -1,0 +1,28 @@
+body {
+font-family: "Verdana";
+margin-bottom: 50px;
+margin-right: 50px;
+margin-left: 50px;
+color: black;
+font-color: white;
+font-size: x-large;
+text-align: center;
+background-image: linear-gradient(to right, #336600 , #e6e600);
+}
+
+home {
+font-family: "Verdana";
+margin-bottom: 50px;
+margin-right: 50px;
+margin-left: 50px;
+color: black;
+font-color: black;
+text-align: center;
+font-size: x-large;
+font-weight: bold;
+}
+
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:30px;
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+ALL USERS
+{% endblock %}
+{% block content %}
+    {% for usr in values: %}
+        <p1>Username: {{usr.username}} </br> User's tasks: {{usr.tasks}}</br></p1>
+        <a href="/deleteUser{{usr._id}}">
+            <input type="button" value="Delete User" />
+        </a>
+        </br></br>
+    {% endfor %}
+{% endblock %}
