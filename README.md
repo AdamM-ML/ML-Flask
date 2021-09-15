@@ -1,4 +1,3 @@
-# ML-Techniques
 Support Vector Machines:</br>
 Project depicts the use of SVM classification method to create the prediction model.
 I used the dataset from sklearn datasets, I did not include any additional external data files unlike in linear regression and KNN projects.
