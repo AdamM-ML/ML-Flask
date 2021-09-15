@@ -1,5 +1,3 @@
-# ML-Techniques
-Contains projects which demonstrate different machine learning techniques (implemented in Python).</br></br>
 Linear Regression:</br>
 Project contains the use of linear regression on the dataset focused on features and the quality of wines.</br>
 It tries to predict the quality basing on the wine's features. Model learns the dependencies between the features
