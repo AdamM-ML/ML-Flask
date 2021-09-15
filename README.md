@@ -1,4 +1,4 @@
-#AI
+# AI
 Chatbot:</br>
 Project is a chatbot which attempts to help the user by answering his/her questions regarding the tools he/she can use on the computer e.g. to do their work like writing articles, drawing digital paintings, creating e-mail account etc.</br> The idea was to help people who have little experience with computers and had to switch to remote working style (e.g. due to Covid-19 epidemic).</br></br>
 Chatbot provides answers all of which were checked for their legitimacy and in some cases provides web links to the places where we can download mentioned tools or read more about some topic.</br></br>
