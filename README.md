@@ -1,5 +1,5 @@
 
-KNN:
+KNN:</br>
 Project contains simple use of KNN (k-nearest neighbours) technique applied to the dataset which topic are animals and their features.
 It tries to predict the type of the animal basing on its features and looking at nearest, most similar animals in order to classify the type of one correctly. 
 The classification's numbers (types) are based on the rule in the dataset:</br>
@@ -14,5 +14,5 @@ puma, pussycat, raccoon, reindeer, seal, sealion, squirrel, vampire, vole, walla
 6 -- (8) flea, gnat, honeybee, housefly, ladybird, moth, termite, wasp</br>
 7 -- (10) clam, crab, crayfish, lobster, octopus, scorpion, seawasp, slug, starfish, worm</br>
 "
-
+</br>
 So if we get as a type e.g. 7, we know the animal is either clam, crab, crayfish, lobster, octopus, scorpion, seawasp, slug, starfish or worm.
