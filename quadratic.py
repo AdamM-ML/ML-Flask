@@ -2,6 +2,8 @@ from random import randint
 from tkinter import *
 from tkinter import Tk
 import tkinter.scrolledtext as scrolledtext
+import logging
+import datetime
 
 
 """Instance of tkinter-based UI - class definition"""
@@ -45,13 +47,25 @@ class MathOps:
         return lambda x: numbers[0] * x ** 2 + numbers[1] * x + numbers[2]
 
 
-"""Putting MathOps operations results into the UI"""
+"""Putting MathOps operations results into the UI and logging them into file"""
 def display_handler(math_instance, ui, f_name, collection, x):
     output = math_instance.quadratic_function_constructor(collection)
     ui.txt.configure(state="normal")
     ui.txt.insert(INSERT, f'\nResult of the function {f_name}\nfor the collection: {collection}\ngives the '
             f'result: {output(x)}\n\n')
     ui.txt.configure(state="disabled")
+
+    """Logging. Using 'n' and 'n_modified' to create log files with next collection of results
+     each time the program is executed"""
+    LOGGING_FORMAT="%(levelname)s %(asctime)s - %(message)s"
+    n = datetime.datetime.now()
+    n_modified = str(n.strftime("%H_%M_%S"))
+    logging.basicConfig(filename=f"log{n_modified}",
+                        level=logging.DEBUG,
+                        format=LOGGING_FORMAT,
+                        filemode="w")
+    logger = logging.getLogger()
+    logging.info(ui.txt.get("1.0", END))
 
 
 """Starting UI"""
