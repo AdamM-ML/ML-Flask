@@ -14,5 +14,5 @@ perfect coding habits are concerned, but thanks to code comments / docstrings I 
 **Random module** to create methods that generate random numbers as the input to the operations;</br>
 **MathOps class** where all mathematic operations methods and number generators are located;</br>
 **TkUi class** that handles UI generation and design;</br>
-**Other** the code that is not a part of class or functions serves as the part where the objects are created and the methods are called in order to prepare data displayed later in the UI;</br></br>
+**Other** - the code that is not a part of class or functions serves as the part where the objects are created and the methods are called in order to prepare data displayed later in the UI;</br></br>
 
