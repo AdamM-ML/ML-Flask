@@ -5,8 +5,7 @@ I understand and all .py files are written by me. Project's execution results ar
 
 To conclude, the juicy part of this project is not the output/execution of program, but the code itself. I believe the code is not perfect as far as the structure and
 perfect coding habits are concerned, but thanks to code comments / docstrings I think its quite readable and understandable.
-
-</br></br>
+</br>
 
 # Details
 **Logging module** to produce log file after each execution;</br>
