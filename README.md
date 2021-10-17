@@ -9,10 +9,10 @@ perfect coding habits are concerned, but thanks to code comments / docstrings I 
 </br></br>
 
 # Details
-**Logging module** to produce log file after each execution;
-**Tkinter module** to design the UI;
-**Random module** to create methods that generate random numbers as the input to the operations;
-**MathOps class** where all mathematic operations methods and number generators are located;
-**TkUi class** that handles UI generation and design;
-**Other** the code that is not a part of class or functions serves as the part where the objects are created and the methods are called in order to prepare data displayed later in the UI
+**Logging module** to produce log file after each execution;</br>
+**Tkinter module** to design the UI;</br>
+**Random module** to create methods that generate random numbers as the input to the operations;</br>
+**MathOps class** where all mathematic operations methods and number generators are located;</br>
+**TkUi class** that handles UI generation and design;</br>
+**Other** the code that is not a part of class or functions serves as the part where the objects are created and the methods are called in order to prepare data displayed later in the UI;</br></br>
 
