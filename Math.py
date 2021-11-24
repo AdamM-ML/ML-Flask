@@ -106,6 +106,7 @@ I used pgAdmin4 to create database with table "Results" that has 3 columns:
 If different names are used for columns or table, then respective names in the INSERT INTO query must be used/changed
  and also in giving parameters in cursor.execute().
 '''
+
 def db_save(parameters, function_name, function_result):
     connection = psycopg2.connect(dbname="MathOps_results", user="postgres", password="Samogone")
     c = connection.cursor()
@@ -183,10 +184,9 @@ display_handler(math2, ui, MathOps.root_function.__qualname__, numbers_collectio
 display_handler(math2, ui, MathOps.sum.__qualname__, numbers_collection2)
 display_handler(math2, ui, MathOps.factorial.__qualname__, numbers_collection2)
 
-numbers_collection3 = [next(nums_float), next(nums_float), next(nums_float)]
+numbers_collection3 = [round(next(nums_float), 2), round(next(nums_float), 2), round(next(nums_float), 2)]
 generated_numbers_check(numbers_collection3)
 
-'''Calculations are heavy/unreasonable if we root or factorial a float number so I cast it to int'''
 math3 = MathOps(numbers_collection3)
 display_handler(math3, ui, MathOps.quadratic_function_constructor.__qualname__, numbers_collection3, 3)
 display_handler(math3, ui, MathOps.exponential.__qualname__, numbers_collection3)
